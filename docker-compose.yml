@@ -1,0 +1,15 @@
+# Use root/example as user/password credentials
+version: '3.8'
+
+services:
+  connectorpython:
+    build: .
+    image: connectorpython:c7-systemd
+    container_name: connector-python
+    restart: always
+    volumes:
+      - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
+
+      - type: bind
+        source: ".\\my_python_code"
+        target: "/root/my_python_code"
