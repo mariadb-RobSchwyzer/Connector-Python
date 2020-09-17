@@ -32,3 +32,6 @@ Where `/root/my_python_code/test.py` is replaced with the path to your Python co
 
 # Connecting to MariaDB
 The container only provides connector infrastructure, it does not provide a running MariaDB server. Reference [Connector/Python documentation](https://mariadb.com/docs/appdev/connector-python/#opening-a-connection) to learn how to specify parameters to open a connection to a remote MariaDB server.
+
+# `test.py`
+Edit `docker-compose.yml` `environment` entries to change connection parameters `test.py` script uses.
