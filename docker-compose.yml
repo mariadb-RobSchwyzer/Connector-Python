@@ -6,6 +6,11 @@ services:
     build: .
     image: connectorpython:c7-systemd
     container_name: connector-python
+    environment:
+      MARIADB_USER: 'connpy_test'
+      MARIADB_PASS: 'passwd'
+      MARIADB_HOST: 'localhost'
+      MARIADB_PORT: 3306
     restart: always
     volumes:
       - "/sys/fs/cgroup:/sys/fs/cgroup:ro"
